@@ -22,17 +22,17 @@ figure, plot(n,z); title('Random Input Signal z[n]');
 
 
 % Generate Signals
-temp = x;
+temp = z;
 flag = 0; 
 while(1)
-    flag = mod(flag + 1,2);
-    if flag == 0
-        M = 100;
-    else 
-        M = 200;
-    end
+%     flag = mod(flag + 1,2);
+%     if flag == 0
+%         M = 100;
+%     else 
+%         M = 200;
+%     end
     Delay = zeros(1,M);
-Result = zeros(1,10^4+1);
+Result = zeros(1,10^3+1);
 for index = 1:length(Result)
     if index <= length(temp)
         Result(index) = temp(index) + Alpha * Delay(1);
